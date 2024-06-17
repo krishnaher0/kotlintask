@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- Profile ImageView -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/profile_avatar" />
+
+    <!-- TextView for "New on Plantino" -->
+    <TextView
+        android:id="@+id/new_on_plantino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:text="New on Plantino"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <!-- View below the TextView -->
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_below="@+id/new_on_plantino"
+        android:layout_marginTop="12dp"
+        app:iss_auto_cycle="true"
+        app:iss_delay="1000"
+        app:iss_period="1000"
+        app:iss_text_align="CENTER" />
+
+    <!-- RecyclerView taking up the remaining height -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/image_slider"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp" />
+
+</RelativeLayout>
