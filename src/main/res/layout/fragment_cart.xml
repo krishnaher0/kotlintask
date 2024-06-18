@@ -13,10 +13,5 @@
         android:textAlignment="center"
         android:text="@string/this_is_a_cart_fragments" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="198dp"
-        android:layout_height="147dp"
-        android:text="Hell Worldo" />
 
 </FrameLayout>
